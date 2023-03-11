@@ -1,10 +1,23 @@
+/* Definiendo Estilos */
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 * {
+
     font-family: 'Rubik', sans-serif;
+
 }
 
-.tarjeta {
+#tarjeta {
+
     height: 43rem;
     width: 32rem;
+
+}
+
+.form-control::placeholder {
+
+    color: #198754;
+    font-size: larger;
+
 }
