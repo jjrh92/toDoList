@@ -5,6 +5,7 @@
 const cuadroBlanco = document.getElementById ("cuadroBlanco");
 const boton_agregar_tarea = document.getElementById ("boton_agregar_tarea");
 const texto_agregar_tarea = document.getElementById ("texto_agregar_tarea");
+const boton_eliminar_tarea = document.getElementById ("boton_eliminar_tarea");
 
 // Esta funcion comprueba que el contenido del input no se encuentre vacio. En caso de que este vacio el usuario recibira un mensaje de error.
 
@@ -41,6 +42,7 @@ function CrearTarea () {
     nuevoInput.disabled = true;
 
     const botonEliminar = document.createElement ("button");
+    botonEliminar.setAttribute ("id", "boton_eliminar_tarea");
     botonEliminar.setAttribute ("class", "btn btn-success bi bi-trash-fill");
     botonEliminar.innerText = "Eliminar";
 
@@ -52,5 +54,7 @@ function CrearTarea () {
 };
 
 boton_agregar_tarea.addEventListener ("click", VerificarTarea);
+
+
 
 // Fin
