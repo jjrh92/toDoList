@@ -55,6 +55,13 @@ function CrearTarea () {
 
 boton_agregar_tarea.addEventListener ("click", VerificarTarea);
 
+// boton_eliminar_tarea.onclick = EliminarTarea ();
 
+// function EliminarTarea () {
+
+//     cuadroBlanco.remove (nuevaTarea);
+
+// }
 
 // Fin
+
