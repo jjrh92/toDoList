@@ -6,7 +6,9 @@ const cuadroBlanco = document.getElementById ("cuadroBlanco");
 const boton_agregar_tarea = document.getElementById ("boton_agregar_tarea");
 const texto_agregar_tarea = document.getElementById ("texto_agregar_tarea");
 
+
 // Esta funcion comprueba que el contenido del input no se encuentre vacio. En caso de que este vacio el usuario recibira un mensaje de error.
+
 
 function VerificarTarea () {
 
@@ -46,6 +48,18 @@ function VerificarTarea () {
 
 }
 
+// Declaramos un array para guardar/restaurar las tareas en/del localstorage.
+
+// window.addEventListener ("load", (event) => {
+
+//     console.log ("page is fully loaded");
+
+// });
+
+let tareaNumero = 0;
+let tareasGuardadas = [];
+
+
 // Esta funcion agrega la tarea a la lista en caso de que se apruebe la validacion
 
 function CrearTarea () {
@@ -63,6 +77,14 @@ function CrearTarea () {
     nuevoInput.setAttribute ("placeholder", texto_agregar_tarea.value);
     nuevoInput.setAttribute ("autocomplete", "off");
     nuevoInput.disabled = true;
+
+    // Seccion de parametros para el local storage.
+
+    tareaNumero += 1;
+    let tareaIngresada = "Tarea" +tareaNumero;
+    tareasGuardadas.push (texto_agregar_tarea.value);
+    localStorage.setItem (tareaIngresada, texto_agregar_tarea.value);
+    console.log (tareasGuardadas);
 
     // El segundo elemento hijo es el boton de eliminar tarea el cual por ahora definiremos visualmente sin incorporar logica alguna todavia.
 
@@ -95,6 +117,11 @@ function CrearTarea () {
         });
 
         nuevaTarea.remove ();
+        localStorage.removeItem (tareaIngresada);
+
+        // Cangrejo de oro
+
+        console.log ("Las tareas que quedan son " +tareasGuardadas);
 
     });
 
