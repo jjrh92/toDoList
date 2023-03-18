@@ -125,9 +125,33 @@ window.addEventListener ("load", (event) => {
 
     }
 
-    // console.log (tareasEncontradas);
-
     tareasEncontradas.forEach (CrearTareasEncontradas);
+
+    if (tareasEncontradas.length > 0) {
+
+        pintarBotonEliminarTodas ();
+
+    }
+
+    function pintarBotonEliminarTodas () {
+
+        const BotonEliminarTodas = document.createElement ("button");
+        BotonEliminarTodas.setAttribute ("id", "boton_eliminar_tarea");
+        BotonEliminarTodas.setAttribute ("class", "btn btn-success bi bi-trash-fill mx-3 py-3");
+        BotonEliminarTodas.innerText = "Eliminar Todas y Reiniciar...";
+        cuadroBlanco.append (BotonEliminarTodas);
+
+        BotonEliminarTodas.addEventListener ("click", () => {
+
+            alert ("Se actualizara esta pagina.");
+            localStorage.clear ();
+            location.reload ();
+
+        });
+
+    }
+
+
 
     function CrearTareasEncontradas (tareas) {
 
@@ -139,32 +163,10 @@ window.addEventListener ("load", (event) => {
         nuevoInput.setAttribute ("placeholder", `${tareas}`);
         nuevoInput.setAttribute ("autocomplete", "off");
         nuevoInput.disabled = true;
-        const boton_eliminar_tarea = document.createElement ("button");
-        boton_eliminar_tarea.setAttribute ("id", "boton_eliminar_tarea");
-        boton_eliminar_tarea.setAttribute ("class", "btn btn-success bi bi-trash-fill");
-        boton_eliminar_tarea.innerText = "Eliminar";
+
         cuadroBlanco.append (nuevaTarea);
         nuevaTarea.append (nuevoInput);
-        nuevaTarea.append (boton_eliminar_tarea);
 
-        boton_eliminar_tarea.addEventListener ("click", () => {
-
-            Swal.fire ({
-    
-                toast: "true",
-                position: "center",
-                icon: "warning",
-                color: "green",
-                text: "Tarea Eliminada satisfactoriamente.",
-                showConfirmButton: false,
-                timer: 1500,
-    
-            });
-    
-            nuevaTarea.remove ();
-            localStorage.clear (); // Falta implementar este boton para eliminar del localstorage los elementos cargados si el usuario lo desea, PERO SOLAMENTE EL ELEMENTO "TOCADO".
-    
-        });
     }
 
 });
@@ -241,5 +243,6 @@ function CrearTarea () {
 boton_agregar_tarea.addEventListener ("click", VerificarTarea);
 
 // V-1.0.0 - Julio Reyes - 15MAR2023.
+// V-2.0.0 - Julio Reyes - 18MAR2023.
 
 // Fin
