@@ -1,16 +1,62 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/libs/prisma"
 
-export function GET (request, {params}) {
+export async function GET (request, {params}) {
 
-    return NextResponse.json ("Obteniendo Tarea " + params.id)
-}
+    const task = await prisma.task.findUnique ({
 
-export function PUT (request, {params}) {
+        where: {
 
-    return NextResponse.json ("Actualizando Tarea " + params.id)
-}
+            id: Number(params.id),
 
-export function DELETE (request, {params}) {
+        },
 
-    return NextResponse.json ("Borrando Tarea " + params.id)
-}
+    });
+
+    return NextResponse.json (task)
+
+};
+
+export async function PUT (request, {params}) {
+
+    const data = await request.json ();
+
+    const taskUpdated = await prisma.task.update ({
+
+        where: {
+
+            id: Number(params.id),
+
+        },
+
+        data: data,
+
+    })
+
+    return NextResponse.json (taskUpdated);
+
+};
+
+export async function DELETE (request, {params}) {
+
+    try {
+
+        const taskRemoved = await prisma. task.delete ( {
+
+            where: {
+    
+                id: Number (params.id),
+    
+            }
+    
+         })
+    
+        return NextResponse.json (taskRemoved)
+        
+    } catch (error) {
+
+        return NextResponse.json (error.message);
+        
+    }
+
+};
