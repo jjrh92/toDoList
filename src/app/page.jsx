@@ -6,9 +6,10 @@ async function loadTasks () {
   // const res = await fetch ("http://localhost:3000/api/tasks")
   // const data = await res.json ()
   return await prisma.task.findMany ();
-  console.log (tasks);
 
 }
+
+export const revalidate = 60;
 
 async function HomePage () {
 
