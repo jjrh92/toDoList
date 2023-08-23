@@ -9,7 +9,7 @@ async function loadTasks () {
 
 }
 
-export const revalidate = 1;
+export const dynamic = 'force-dynamic';
 
 async function HomePage () {
 
