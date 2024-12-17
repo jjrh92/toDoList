@@ -1,6 +1,6 @@
 function AboutPage() {
   return (
-    <section>
+    <section className="min-h-screen flex flex-col justify-start items-center">
       <h3 className="text-4xl font-bold my-5">About this project</h3>
       <p>
         This project is a rework of the previous task manager made with Vanilla
