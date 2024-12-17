@@ -2,14 +2,14 @@
 
 <div align="center">
 
-![Github Contributors](https://img.shields.io/github/contributors/jjrh92/toDoList)
-![Github Stars](https://img.shields.io/github/stars/jjrh92/toDoList)
-![Github Issues](https://img.shields.io/github/issues-raw/jjrh92/toDoList)
+![Github Contributors](https://img.shields.io/github/contributors/jjrh92/TaskMate)
+![Github Stars](https://img.shields.io/github/stars/jjrh92/TaskMate)
+![Github Issues](https://img.shields.io/github/issues-raw/jjrh92/TaskMate)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jjrh92/toDoList">
+  <a href="https://github.com/jjrh92/TaskMate">
     <img src="https://clickup.com/blog/wp-content/uploads/2019/01/to-do-list-apps.png" alt="Logo" width="200" height="200">
   </a>
 
@@ -19,11 +19,11 @@
     To-Do-List.
     <br />
     <br />
-    <a href="https://jjrh92.github.io/toDoList/">View Demo - Ver Demo</a>
+    <a href="https://taskmate.julioreyes.dev/">View Demo - Ver Demo</a>
     ·
-    <a href="https://github.com/jjrh92/toDoList/issues">Report Bug - Reportar Bug</a>
+    <a href="https://github.com/jjrh92/TaskMate/issues">Report Bug - Reportar Bug</a>
     ·
-    <a href="https://github.com/jjrh92/toDoList/issues">Request Feature - Pedir Feature</a>
+    <a href="https://github.com/jjrh92/TaskMate/issues">Request Feature - Pedir Feature</a>
   </p>
 </div>
 
@@ -50,7 +50,7 @@ Install the project locally - Instalar el proyecto localmente.
 
 Clone the repo and run a liveserver
    ```sh
-   git clone https://github.com/jjrh92/toDoList.git
+   git clone https://github.com/jjrh92/TaskMate.git
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -59,7 +59,6 @@ Usage <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2lvcWx2Ynpia3
 </h1>
 
 CRUD stands for: Create, Read, Update, Delete. - CRUD significa (por sus siglas en ingles): Crear, Leer, Actualizar, Borrar. 
-
 
 <!-- CONTRIBUTING -->
 <h1 align="center"> 
@@ -81,7 +80,7 @@ Contact <img src="https://media3.giphy.com/media/dA9zmG7BCtbauczAQY/giphy.gif" w
 
 [Via Github](https://github.com/jjrh92)
 
-[Via E-Mail](mailto:admin@jjrh92.dev)
+[Via E-Mail](mailto:contact@julioreyes.dev)
 
 [Via Telegram](https://t.me/jjrh92)
 
