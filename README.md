@@ -16,7 +16,7 @@
 <h3 align="center">Welcome - Bienvenid@</h3>
 
   <p align=center">
-    To-Do-List.
+    TaskMate
     <br />
     <br />
     <a href="https://taskmate.julioreyes.dev/">View Demo - Ver Demo</a>
